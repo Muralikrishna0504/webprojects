@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    {% block extracss %}
+        <link rel="stylesheet" href="{% static 'css/update.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block bodyblock %}
+    <form method="post" enctype="multipart/form-data">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="update">
+    </form>
+{% endblock %}
+</body>
+</html>

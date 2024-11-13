@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    {% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    {% endblock %}
+</head>
+<body>
+    {% block bodyblock %}
+    <div class="signup">
+        <h1>SignUp Form</h1>
+        <form method="post">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" value="signup">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    {% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/detail.css'%}">
+    {% endblock %}
+</head>
+<body>
+    {% block bodyblock %}
+    <div class="product">
+        <h2>{{emp.title}}</h2>
+        <img src="{{emp.image.url}}" width="700px" height="500px">
+        <div class="content">
+            <p>{{emp.content}}</p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

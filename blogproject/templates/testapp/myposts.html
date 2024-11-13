@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/myposts.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block bodyblock %}
+{% if posts %}
+    <div class="posts">
+        {% for i in posts %}
+        <div class="post">
+            <div>
+               <h1 align="center">{{i.title}}</h1>
+               <img src="{{i.image.url}}" width="600px">
+               <p class="content">{{i.content}}</p>
+            </div>
+            <div class="right">
+                <a href="/myposts/{{i.id}}" class="update">Update</a>
+                <a href="/delete/{{i.id}}" class="delete">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="empty">
+        <h4>No Posts yet!!!</h4>
+    </div>
+{% endif %}
+{% endblock %}
+</body>
+</html>

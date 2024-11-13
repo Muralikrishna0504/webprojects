@@ -1,0 +1,73 @@
+.loginform{
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:max-content;
+    height:max-content;
+    justify-content:center;
+    margin-left:80px;
+
+}
+input{
+    margin:6px;
+}
+.loginform h1{
+    margin-bottom:0;
+}
+.signup{
+    margin-top:140px;
+    box-sizing:border-box;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.loginpage{
+    display:flex;
+    gap:40px;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    margin-top:100px;
+}
+.loginimg{
+    display:flex;
+    width:max-content;
+    height:80vh;
+    flex-shrink:1;
+
+}
+.loginimg img{
+    width:900px;
+    height:100vh;
+}
+@media(max-width:576px){
+    .loginpage{
+        flex-wrap:wrap;
+    }
+}
+.submitbtn{
+    border:none;
+    background:black;
+    color:white;
+    font-size:18px;
+    padding:6px 18px;
+    border-radius:10px;
+}
+.credentials input{
+    padding:6px 12px;
+    width:160px;
+    display:flex;
+}
+.credentials label{
+    font-size:22px;
+    font-weight:500;
+}
+.credentials{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}

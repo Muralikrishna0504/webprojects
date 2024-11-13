@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extracss %}
+    {% endblock %}
+</head>
+<body>
+<div class="header">
+    <div class="items" id="logo"><a href='/home' class="head">Anime<span>Thoughts</span></a></div>
+    <div class="items"><a href="/home">Home</a></div>
+    <div class="items"><a href="/addblog">Add Blog</a></div>
+    {% if request.user.is_authenticated %}
+    <div class="items"><a href="/myposts">MyPosts</a></div>
+    <div id="username" class="items"><p>{{request.user.username}}</p></div>
+    <div class="items" id="logoutbtn"><form action="/accounts/logout/" method="post" class="logout">{% csrf_token %}<button>Logout</button></form></div>
+    {% else %}
+    <div class="items"><a href="/accounts/login">Login</a></div>
+    <div class="items"><a href="/signup">SignUp</a></div>
+    {% endif %}
+</div>
+{% block bodyblock %}
+{% endblock %}
+
+</body>
+</html>

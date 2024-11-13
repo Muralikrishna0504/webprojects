@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+{% block bodyblock %}
+    <div class="banner">
+        <div class="left">
+        <h2>Welcome to Your Ultimate Anime Destination!</h2>
+        <p>Dive into the vibrant world of anime, where every frame tells a story and every character sparks a new adventure! Join us as we explore the latest series, classic favorites, and everything in between. Whether you're a seasoned otaku or just starting your journey, there's something here for everyone. Let’s celebrate the artistry, culture, and passion that make anime so special!</p>
+        <a href="#items">Explore</a>
+        </div>
+        <div class="right">
+            <img src="{% static 'images/animecom.jpg' %}" width="700px" height="670px">
+        </div>
+    </div>
+    <div class="explore">Explore Our Blogs</div>
+    <div class="griditem" id="items">
+        {% for i in blog %}
+            <div class="item">
+            <div>
+                <img src="{{i.image.url}}" width="300px" height="200px">
+            </div>
+            <div class="desc">
+                <h4>{{i.title}}</h4>
+                <p class="author">Author : {{i.author}}</p>
+                <a href="/detail/{{i.id}}">ReadBlog</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>
