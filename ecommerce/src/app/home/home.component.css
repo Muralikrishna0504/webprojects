@@ -1,0 +1,85 @@
+.home{
+    box-sizing: border-box;
+    margin-top:100px;
+    background-color: whitesmoke;
+    height:max-content;
+    display: flex;
+   justify-content: space-around;
+   padding:20px;
+    width:100%;
+    position:relative;
+    left:0;
+    top:0;
+    padding-bottom:60px;
+}
+.banner{
+    width:max-content;
+    padding:20px;
+    padding-top:100px;
+}
+.banner h1{
+    color:orange;
+    font-size: 40px;
+    margin-bottom:0px;
+}
+.banner p{
+    font-size: 16px;
+    font-weight: 800;
+    color:grey;
+    margin-top:16px;
+}
+.sub-para{
+    max-width: 400px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+.banner button{
+    border:none;
+    border-radius: 10px;
+    background-color: black;
+    color:white;
+    padding:8px 16px;
+    transition: transform 0.5s ease;
+    margin-top:10px;
+    cursor: pointer;
+}
+.banner button:hover{
+    transform: scale(1.1);
+}
+.bannerimg{
+    transition: transform 1s ease;
+    margin-top:30px
+}
+
+.bannerimg:hover{
+    transform: translatex(-20px);
+
+}
+.mens{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    width:max-content;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    transition: transform 1s ease;
+}
+.mens:hover{
+    transform: scale(1.1);
+}
+.content{
+    margin-top:120px;
+}
+.content h2{
+    color:grey;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.mensproduct{
+    display: flex;
+    gap:60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:0px;
+}

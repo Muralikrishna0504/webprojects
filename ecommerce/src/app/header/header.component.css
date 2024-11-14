@@ -1,0 +1,48 @@
+.head{
+    display:flex;
+    background:lavender;
+    color:darkolivegreen;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    gap:40%;
+    align-items: center;
+    box-sizing: border-box;
+    padding:10px 120px;
+    z-index: 1;
+}
+.logo{
+    margin-left:60px;
+}
+.logo a{
+    color:darkolivegreen;
+    text-decoration: none;
+    font-size:30px;
+}
+a{
+    text-decoration: none;
+    color:darkolivegreen;
+    font-size:20px;
+    font-weight:bolder;
+    padding:5px;
+    transition: color 0.5s ease;
+}
+ul li{
+    display: inline-block;
+    transition:transform 1.5s ease;
+    padding:4px 6px;
+    margin-right:40px;
+
+}
+ul{
+    margin-left:5px;
+}
+ul li:hover{
+    transform: scale(1.1);
+    background-color: darkolivegreen;
+}
+a:hover{
+    color:white;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<div class="home">
+    <div class="banner">
+        <h1>Discover Our Trendy<br> Collections</h1>
+        <p>Shop Our Collections and Refresh your wardrobe today!</p>
+        <p class="sub-para"> we believe fashion is about more than just clothing,it's a way to express your unique personality and feel confident every day. From effortlessly chic basics to statement pieces that turn heads, our carefully curated collections are designed to keep you looking and feeling your best.</p>
+        <button routerLink="/products">Shop Now</button>
+    </div>
+    <div class="bannerimg">
+        <img src="https://cdn.shopify.com/s/files/1/0094/6326/7379/files/ST2205-SB_2_2662802d-a9ff-4464-8fb8-892310de3094.jpg?v=1713356441" height="450px">
+    </div>
+</div>
+<div class="content">
+    <h2>Explore Our Best Deals!</h2>
+    <div class="mensproduct">
+        <div *ngFor="let i of pro" class="mens">
+            <a routerLink='/product/{{i.id}}'><img src="{{i.imageurl}}" width="200px" height="300px" ></a>
+            <p>{{i.title}}</p>
+            <p>{{i.price|currency:'INR'}}</p>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="mensproduct">
+        <div *ngFor="let i of womenpro" class="mens">
+           <a routerLink="/product/{{i.id}}"> <img src="{{i.imageurl}}" width="200px" height="300px"></a>
+            <p>{{i.title}}</p>
+            <p>{{i.price|currency:'INR'}}</p>
+        </div>
+    </div>
+</div>
+

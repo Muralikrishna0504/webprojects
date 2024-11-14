@@ -1,0 +1,58 @@
+.products{
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+    margin-left:40px;
+    box-sizing: border-box;
+    height:max-content'
+}
+.product{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:300px;
+    box-shadow: 0px 0px 2px grey;
+    box-sizing: border-box;
+    height:550px;
+    padding:20px;
+    
+}
+.product button{
+    border:none;
+    padding:6px 12px;
+    background-color: green;
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top:2px;
+    transition:transform 0.5s ease;
+}
+.product button:hover{
+    transform:scale(1.1)
+}
+
+h1{
+    margin-top:100px;
+    font-size:40px;
+    color:black;
+    text-align: center;
+    font-weight: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: whitesmoke;
+    padding:40px;
+}
+h1 span{
+    color:hotpink;
+}
+.title{
+    color:orange;
+    font-weight:600px;
+}
+.price{
+    color:black;
+    font-weight:bolder
+}

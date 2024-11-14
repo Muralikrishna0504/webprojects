@@ -1,0 +1,28 @@
+<div *ngIf="productarray.length>0">
+    <div class="cart">
+        <h1>Cart Items</h1>
+        <div *ngFor="let i of productarray" class="cartitem">
+            <img src="{{i.imageurl}}" width="200px" height="300px">
+            <div class="right">
+                <p class="title">{{i.title}}</p>
+                <p>{{i.price|currency:'INR'}}</p>
+            </div>
+            <div class="cancel"><button (click)="remove(i)">X</button></div>
+        </div>
+    </div>
+
+    <div class="buy">
+        <h3>Total:{{total|number}}</h3>
+        <button (click)="ordered()">{{text}}</button>
+    </div>
+</div>
+<div *ngIf="productarray.length===0" class="emptycart">
+    <div>
+        <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png" width="300px">
+    </div>
+    <div class="matter">
+        <h3>Your Cart is empty</h3>
+        <p>Check our latest trends and add them to cart!!!</p>
+        <a routerLink="/products">ShopNow</a>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h1>Dive into our <span>Collections</span></h1>
+<div class="products">
+    <div *ngFor="let i of products" class="product">
+       <a routerLink="/product/{{i.id}}"><img src="{{i.imageurl}}" width="200px" height="300px"></a>
+        <p class="title">{{i.title}}</p>
+        <p>{{i.rating}}</p>
+        <p class="price">{{i.price|currency:'INR'}}</p>
+        <button (click)="addprod(i)">Add to Cart</button>
+    </div>
+</div>
